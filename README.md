@@ -4,18 +4,18 @@
 
 ## 事前準備
 
-Windows 11 Homeの環境でPython 3.11.2 64bit版で動作確認をしています。
+Windows 11 Homeの環境でPython 3.12.3 64bit版で動作確認をしています。
 
 ### Pythonのインストール
 
 お好きな方法でPythonをインストールしてください。
 
-私は[`pyenv-win`](https://github.com/pyenv/pyenv-win)を使ってPython 3.11.2 64bit版をインストールしています。
+私は[`pyenv-win`](https://github.com/pyenv/pyenv-win)を使ってPython 3.12.3 64bit版をインストールしています。
 [`pipenv`](https://pypi.org/project/pipenv/)も合わせてインストールします。
 
 ```bash
-pyenv install 3.11.2
-pyenv global 3.11.2
+pyenv install 3.12.3
+pyenv global 3.12.3
 pip install pipenv
 ```
 
