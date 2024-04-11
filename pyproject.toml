@@ -1,0 +1,25 @@
+[project]
+name = "pdf2img"
+version = "0.0.1"
+description = "PDF to Image Converter"
+dependencies = [
+    "pdf2image"
+]
+readme = {file = "README.md", content-type = "text/markdown"}
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+license = {file = "LICENSE"}
+authors = [
+  {name = "SAITO, Tetsuya", email = "saito.tetsuya@gmail.com"}
+]
+
+[project.urls]
+"Source" = "https://github.com/3110/pdf2img"
+"Bug Tracker" = "https://github.com/3110/pdf2img/issues"
+
+[project.scripts]
+pdf2img = "pdf2img:main"

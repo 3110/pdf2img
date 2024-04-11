@@ -1,3 +1,4 @@
+import argparse
 from pdf2image import convert_from_path
 import os
 
@@ -57,9 +58,7 @@ def pdf_to_image(
     print("Done!")
 
 
-if __name__ == "__main__":
-    import argparse
-
+def main():
     parser = argparse.ArgumentParser(description="PDFを指定した画像形式に変換する")
     parser.add_argument("pdf_path", type=str, help="入力PDFファイル")
     parser.add_argument(

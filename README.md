@@ -16,7 +16,6 @@ Windows 11 Homeの環境でPython 3.12.3 64bit版で動作確認をしていま�
 ```bash
 pyenv install 3.12.3
 pyenv global 3.12.3
-pip install pipenv
 ```
 
 ### Popplerのインストール
@@ -29,12 +28,13 @@ pip install pipenv
 pacman -S mingw-w64-x86_64-poppler mingw-w64-x86_64-poppler-data
 ```
 
-### 必要なPythonパッケージのインストール
+## インストール
 
-`pipenv`で必要なPythonパッケージをインストールします。
+ソースを展開したフォルダに移動し，以下を実行すると`pdf2img`コマンドがインストールされます。
 
 ```
-pipenv install
+cd pdf2img
+pip install .
 ```
 
 ## 実行方法
@@ -42,7 +42,7 @@ pipenv install
 入力PDFファイルを指定して実行します。他のコマンドライン引数を指定しなかった場合は以下と同じ動きになります。
 
 ```
-pipenv run python pdf2img.py -o . -p 1 -f PNG -d 600 --prefix hoge hoge.pdf
+pdf2img -o . -p 1 -f PNG -d 600 --prefix hoge hoge.pdf
 ```
 
 カレントフォルダが`C:\home\saito`で，そのフォルダにある`hoge.pdf`を入力PDFにして上記のようにコマンドを実行した場合，以下のように表示されます。
@@ -58,7 +58,8 @@ Done!
 コマンドライン引数の仕様は以下の通りです。
 
 ```
-usage: pdf2img.py [-h] [-o OUTPUT_FOLDER] [-p PAGES] [-f {PNG,JPG}] [-d DPI] [--prefix PREFIX] pdf_path
+$ pdf2img -h
+usage: pdf2img [-h] [-o OUTPUT_FOLDER] [-p PAGES] [-f {PNG,JPG}] [-d DPI] [--prefix PREFIX] pdf_path
 
 PDFを指定された画像形式に変換する
 
