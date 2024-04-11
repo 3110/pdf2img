@@ -1,0 +1,8 @@
+[requires]
+python_version = "3.12"
+
+[packages]
+pdf2image = "*"
+
+[dev-packages]
+black = "*"
